@@ -1,38 +1,98 @@
+body {
+    background: black;
+    color: white;
+}
 .App {
-  text-align: center;
+    text-align: center;
+    padding: 5%;
+}
+.App-title {
+    font-size: 26px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*Profile*/
+.profile {
+    display: flex;
+    justify-content: center;
+
+}
+.prof-info {
+    margin-left: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.prof-img {
+    width: 150px;
+    height: 150px;
+    border: 3px solid white;
+    border-radius: 75px;
+    object-fit: cover;
+}
+.prof-name {
+    font-size: 26px;
+}
+.prof-followers, .prof-genres {
+    font-size: 18px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*Gallery*/
+.track {
+    display: inline-block;
+    width: 220px;
+    height:220px;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+.track-img {
+    width: 220px;
+    height: 220px;
+    border: 3px white;
+    border-radius: 3px;
+    object-fit: cover;
+    position: relative;
+}
+.track-text {
+    background: black;
+    color: white;
+    opacity: 0.75;
+    text-align: center;
+    width: 214px;
+    position: absolute;
+    margin-left: 3px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.play {
+    position: absolute;
+    width: 220px;
+    height:220px;
 }
-
-.App-link {
-  color: #61dafb;
+.play-inner {
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 30px;
+    width:60px;
+    height:60px;
+    color: white;
+    margin-left: 100px;
+    margin-top: -100px;
+    float: inline-start;
+    opacity: 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.play-inner:hover {
+    opacity: 1;
+    animation-name: fade-in;
+    animation-duration: 0.5s;
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
 }
